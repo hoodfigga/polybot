@@ -1,0 +1,17 @@
+[package]
+name = "paper_trader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+market_clob = { path = "../../crates/market_clob" }
+net_oddsq = { path = "../../crates/net_oddsq" }
+strategy_engine = { path = "../../crates/strategy_engine" }
+memory_vault = { path = "../../crates/memory_vault" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+chrono = { workspace = true }

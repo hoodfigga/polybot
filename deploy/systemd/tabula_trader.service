@@ -1,0 +1,19 @@
+[Unit]
+Description=Tabula Trader: Hybrid Prediction Market HFT Engine
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/tabula_trader
+Environment="RUST_LOG=info"
+Environment="ODDSQ_API_KEY=your_key"
+Environment="ODDSQ_WEBHOOK_SECRET=your_secret"
+Environment="POLYGON_PRIVATE_KEY=0x..."
+ExecStart=/usr/local/bin/trading_node --port 9005
+Restart=always
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

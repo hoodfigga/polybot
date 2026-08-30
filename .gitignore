@@ -1,0 +1,41 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+
+# Environment files & secrets (DO NOT COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+.secrets/
+*.pem
+*.key
+*.priv
+
+# Node & Dashboard
+node_modules/
+/dashboard/node_modules/
+/dashboard/dist/
+.npm
+.eslintcache
+
+# Logs, databases and runtimes
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+/data/*.db
+/distributed_vaults/**/*.db
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary directories
+/reports/
+/tmp/

@@ -1,0 +1,19 @@
+[package]
+name = "net_polymarket"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+market_clob = { path = "../market_clob" }
+ethers = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tokio-tungstenite = { workspace = true }
+futures-util = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+hmac = "0.12"
+sha2 = "0.10"
+base64 = "0.22"

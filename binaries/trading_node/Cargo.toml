@@ -1,0 +1,22 @@
+[package]
+name = "trading_node"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+market_clob = { path = "../../crates/market_clob" }
+net_polymarket = { path = "../../crates/net_polymarket" }
+net_kalshi = { path = "../../crates/net_kalshi" }
+strategy_engine = { path = "../../crates/strategy_engine" }
+brain_catalyst = { path = "../../crates/brain_catalyst" }
+memory_vault = { path = "../../crates/memory_vault" }
+actix-web = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+chrono = { workspace = true }
+ethers = { workspace = true }
+reqwest = { workspace = true }

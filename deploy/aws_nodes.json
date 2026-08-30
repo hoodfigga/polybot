@@ -1,0 +1,10 @@
+{
+  "instances": [
+    {"name": "Tabula-Node-1-Politics", "id": "i-075a3eb71f7e380b7", "ip": "100.56.228.254", "region": "us-east-1", "strategy": "POLITICS"},
+    {"name": "Tabula-Node-2-FedRates", "id": "i-042f0acbfb6358997", "ip": "3.95.58.135", "region": "us-east-1", "strategy": "FED_RATES"},
+    {"name": "Tabula-Node-3-MacroCPI", "id": "i-0994a67a2ec1e0b14", "ip": "34.228.29.165", "region": "us-east-1", "strategy": "MACRO_CPI"},
+    {"name": "Tabula-Node-4-MarketMaker", "id": "i-0541fff776e0100fa", "ip": "54.175.95.78", "region": "us-east-1", "strategy": "HIGH_FREQ_MM"},
+    {"name": "Tabula-Node-5-CrossVenue", "id": "i-0a075f301ea77d077", "ip": "13.203.161.41", "region": "ap-south-1", "strategy": "CROSS_VENUE_ARB"},
+    {"name": "Tabula-Node-6-CryptoHFT", "id": "i-07789ae7bfb1d36ab", "ip": "3.110.84.166", "region": "ap-south-1", "strategy": "CRYPTO_5M_HFT"}
+  ]
+}

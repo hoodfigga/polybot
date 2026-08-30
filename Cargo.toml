@@ -1,0 +1,39 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/market_clob",
+    "crates/net_oddsq",
+    "crates/net_polymarket",
+    "crates/net_kalshi",
+    "crates/strategy_engine",
+    "crates/brain_catalyst",
+    "crates/memory_vault",
+    "crates/telemetry_fbs",
+    "binaries/trading_node",
+    "binaries/paper_trader",
+    "binaries/backtest_runner",
+    "binaries/generate_polymarket_credentials"
+]
+
+[workspace.dependencies]
+actix = "0.13"
+actix-web = "4"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+futures-util = "0.3"
+reqwest = { version = "0.12", features = ["json", "stream"] }
+ordered-float = { version = "4.2", features = ["serde"] }
+tokio-tungstenite = { version = "0.21", features = ["rustls-tls-webpki-roots"] }
+ethers = { version = "2.0", default-features = false, features = ["rustls"] }
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.4", features = ["derive"] }
+flatbuffers = "2.0.8"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"

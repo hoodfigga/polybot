@@ -1,0 +1,61 @@
+namespace tabula;
+
+struct HexPos {
+    q: int;
+    r: int;
+}
+
+table AgentData {
+    vision_radius: ubyte;
+    metabolic_rate: float;
+    carapace_armor: float;
+    sprint_multiplier: float;
+    harvest_efficiency: float;
+    mineral_affinity: float;
+    mutation_generation: uint;
+}
+
+table WorkerVis {
+    id: ulong;
+    pos: HexPos;
+    energy: float;
+    is_anomaly: bool;
+    species: ubyte; // 0: Harvester, 1: Builder, 2: Predator
+    agent_data: AgentData;
+}
+
+struct CellChunkVis {
+    q: int;
+    r: int;
+    resource_level: float;
+    hazard_active: bool;
+}
+
+struct WeatherVis {
+    storm_q: int;
+    storm_r: int;
+    storm_type: ubyte; // 0: Clear, 1: ThermalStorm, 2: NutrientRain, 3: AcidMist
+    pad1: ubyte;
+    pad2: ushort;
+    intensity: float;
+}
+
+table TrainingMetricsVis {
+    policy_version: ulong;
+    update_count: ulong;
+    policy_loss: float;
+    value_loss: float;
+    entropy: float;
+    mean_advantage: float;
+    sft_sample_count: ulong;
+}
+
+table LiveTelemetry {
+    epoch: ulong;
+    workers: [WorkerVis];
+    grid_chunks: [CellChunkVis];
+    metrics: TrainingMetricsVis;
+    weather: WeatherVis;
+}
+
+root_type LiveTelemetry;
