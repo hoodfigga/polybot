@@ -29,7 +29,7 @@ It combines direct on-chain cryptographic EIP-712 order signing, high-throughput
 │  │ • OrderBookL2 BTree   │──▶│ • Dutch-Book Arbitrage    │──▶│ • Direct EIP-712 Signer       │  │
 │  │ • Micro-Price & OFI   │   │ • Avellaneda-Stoikov MM   │   │ • Proxy Wallet Delegation     │  │
 │  │ • Sequence Gap Guard  │   │ • Dynamic Fee Calculator  │   │ • L2 HMAC Auth Headers        │  │
-│  │ • 5s Spot Consensus  │   │ • Thompson Adaptive Kelly │   │ • CTF Token Redeemer          │  │
+│  │ • 5s Spot Consensus   │   │ • Thompson Adaptive Kelly │   │ • CTF Token Redeemer          │  │
 │  └───────────────────────┘   │ • Online Kalman Filter    │   └───────────────────────────────┘  │
 │                              └───────────────────────────┘                   │                  │
 │                                            │                                 │                  │
@@ -97,10 +97,10 @@ Edit `.env` with your Polygon wallet and Polymarket details:
 POLYGON_RPC_URL=https://polygon-bor-rpc.publicnode.com
 
 # Polygon Private Key (for EIP-712 signing)
-POLYMARKET_PRIVATE_KEY=0xabcdef...
+POLYMARKET_PRIVATE_KEY=0x....
 
 # Polymarket Proxy / Fund Address
-POLYMARKET_PROXY_ADDRESS=0x6674C3dC820B3A9dED849d02C8D7437783EA3Ead
+POLYMARKET_PROXY_ADDRESS=0x....
 
 # Set to true for live money trading, false for dry-run simulation
 LIVE_TRADING=false
